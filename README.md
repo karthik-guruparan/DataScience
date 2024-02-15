@@ -10,3 +10,9 @@ The  Project Objective is to create a Streamlit application that allows users to
 
 **Application High level Workflow:**
 ![image](https://github.com/karthik-guruparan/YoutubeDataHarvestor/assets/77478705/98d85b36-eb0a-4e32-968e-ef44e63be329)
+
+**Application Walkthrough**
+1. When is application is started the user sees the following screen where they can enter the channel ID for which they want to extract the  info into MongoDB. We can also see a table below which displays all the channels which were already loaded into the MongoDB.
+![image](https://github.com/karthik-guruparan/YoutubeDataHarvestor/assets/77478705/46a5d939-c96e-485a-8e5e-a5ecb804e0b3)
+2. If user enters a channel ID which already exists in MongoDB, it will display a message as follows.
+![image](https://github.com/karthik-guruparan/YoutubeDataHarvestor/assets/77478705/143fc4fe-e419-4006-a545-56cba3549542)
