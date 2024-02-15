@@ -7,7 +7,7 @@ import streamlit as st
 
 ## API parameter definition
 def api_param(channel_id): 
-    api_key='AIzaSyAXQLKvJYj35C2HwcBBVXeZ7OW4XW_mq4I'
+    api_key='api_key'
     youtube=build("youtube", "v3", developerKey=api_key)
     return youtube
 
