@@ -1,7 +1,7 @@
 # YouTube Data Harvestor
 ### **Objective**:  
 
-The  Project Objective is to create a Streamlit application that allows users to access and analyze data from multiple YouTube channels. The application should have the following features:
+The  Project Objective is to create a Streamlit application that allows users to access and analyze data from multiple YouTube channels. The application needs to have the following features:
 
 1. Ability to input a YouTube channel ID and retrieve all the relevant data (Channel name, subscribers, total video count, playlist ID, video ID, likes, dislikes, comments of each video) using Google API.  
 2. Option to store the data in a MongoDB database as a data lake.  
