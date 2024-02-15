@@ -1,4 +1,4 @@
-**OBJECTIVE**:  
+#**OBJECTIVE**:  
 
 The  Project Objective is to create a Streamlit application that allows users to access and analyze data from multiple YouTube channels. The application should have the following features:
 
@@ -8,7 +8,7 @@ The  Project Objective is to create a Streamlit application that allows users to
 4. Option to select a channel name and migrate its data from the data lake to a SQL database as tables.  
 5. Ability to search and retrieve data from the SQL database using different search options, including joining tables to get channel details.
 
-**Application High level Workflow:**
+** High level Workflow:**
 
 ![image](https://github.com/karthik-guruparan/YoutubeDataHarvestor/assets/77478705/f0129d00-ddbe-452b-a11d-a70e963991ad)
 
@@ -37,6 +37,8 @@ The  Project Objective is to create a Streamlit application that allows users to
 7. As a final step user can now click on "3.Query Data" and choose any of the query in the drop down and then click on the 'Query Database' button. The user gets an output in the tabular format.
 
 ![image](https://github.com/karthik-guruparan/YoutubeDataHarvestor/assets/77478705/bfe139c0-cdbb-4e61-84e1-073fc5f1c257)
+
+
 
 
 ![image](https://github.com/karthik-guruparan/YoutubeDataHarvestor/assets/77478705/174bc33e-b765-47dd-b64d-900d39606e7a)
