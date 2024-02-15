@@ -9,7 +9,8 @@ The  Project Objective is to create a Streamlit application that allows users to
 5. Ability to search and retrieve data from the SQL database using different search options, including joining tables to get channel details.
 
 **Application High level Workflow:**
-![image](https://github.com/karthik-guruparan/YoutubeDataHarvestor/assets/77478705/98d85b36-eb0a-4e32-968e-ef44e63be329)
+
+![image](https://github.com/karthik-guruparan/YoutubeDataHarvestor/assets/77478705/f0129d00-ddbe-452b-a11d-a70e963991ad)
 
 **Application Walkthrough**
 1. When is application is started the user sees the following screen where they can enter the channel ID for which they want to extract the  info into MongoDB. We can also see a table below which displays all the channels which were already loaded into the MongoDB.
@@ -33,7 +34,7 @@ The  Project Objective is to create a Streamlit application that allows users to
 ![image](https://github.com/karthik-guruparan/YoutubeDataHarvestor/assets/77478705/da78035e-b614-4bb0-8901-650a3fb3db6b)
 
 6. The user needs to repeat previous steps by entering different youtube channel ID so that we have good amount of data to analyse in the final step.
-7. As a final step user can now click on "3.Query Data" and choose any of the query and click on the button. The user gets an output in the tabular format.
+7. As a final step user can now click on "3.Query Data" and choose any of the query in the drop down and then click on the 'Query Database' button. The user gets an output in the tabular format.
 
 ![image](https://github.com/karthik-guruparan/YoutubeDataHarvestor/assets/77478705/bfe139c0-cdbb-4e61-84e1-073fc5f1c257)
 
