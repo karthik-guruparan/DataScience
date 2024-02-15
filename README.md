@@ -41,5 +41,9 @@ The  Project Objective is to create a Streamlit application that allows users to
 
 ![image](https://github.com/karthik-guruparan/YoutubeDataHarvestor/assets/77478705/174bc33e-b765-47dd-b64d-900d39606e7a)
 
+### References:
+**Streamlit Doc:**
+ https://docs.streamlit.io/library/api-reference
 
-
+**Youtube API Reference:**
+https://developers.google.com/youtube/v3/getting-started
