@@ -1,5 +1,4 @@
-#.venv\Scripts\activate.bat
-# UC2tBkb0hYIg_nVTIZHG4iJw
+#Import required libraries
 from googleapiclient.discovery import build
 from pymongo import MongoClient
 import pandas as pd
@@ -171,12 +170,11 @@ def get_comment_details(youtube,vid_ids):
                 if nextpage==None:
                     break
     except:
-        pass # if no comments for videos    
+        pass  
     return comment_info
     
 def create_db():
     try:
-#        st.write('DB creation')
         connection=mysql.connect(
                                     host='localhost',
                                     user='root',
@@ -187,9 +185,7 @@ def create_db():
         query= '''create database Youtube;'''
         cursor.execute(query)
         connection.commit()
-#        st.write('Youtube DB Created Successfully')
     except:
-#        st.write('Youtube DB exists')
         pass
         
 def create_and_insert_channel_table(channel_id):
@@ -214,9 +210,7 @@ def create_and_insert_channel_table(channel_id):
               '''
         cursor.execute(query)
         connection.commit()
- #       st.write('Channel Table created')
     except:
- #       st.write('Channel Table exists')
         pass
     data=[]
     collection=connect_mongo()
@@ -266,9 +260,7 @@ def create_and_insert_playlist_table(channel_id):
               '''
         cursor.execute(query)
         connection.commit()
-#        st.write('Playlist Table Created')
     except:
-#        st.write('Playlist Table Exists')
         pass
     query=''' 
               INSERT INTO Playlist(
@@ -326,9 +318,7 @@ def create_and_insert_video_table(channel_id):
               '''
         cursor.execute(query)
         connection.commit()
-#        st.write('Video Table Created')
     except:
-#        st.write('Video Table already exists')
         pass
     query='''
               INSERT INTO  Video(
@@ -355,10 +345,8 @@ def create_and_insert_video_table(channel_id):
             for elem in item['playlist_video_info']:
                 data.append(elem)
     pl_vid_relation_df=pd.DataFrame(data)
- #   st.write(pl_vid_relation_df)
 
     data=[]
-#    st.write(channel_id)
     for item in collection.find({},{'_id':0,'channel_info':1,'video_info':1}):
         if item['channel_info']['channel_id']==channel_id:
             for i in range(len(item['video_info'])):
@@ -463,8 +451,9 @@ def create_and_insert_comment_table(channel_id):
     
 ## Streamlit app 
 st.title(':red[Youtube Data Harvesting]',anchor=False) 
-tab1, tab2,tab4 = st.tabs(["1.Extract data to MongoDB ->", "2.Export data to MySQLDB ->","3.Query Data"])
-with tab1:
+tab1, tab2,tab3 = st.tabs(["1.Extract data to MongoDB ->", "2.Export data to MySQLDB ->","3.Query Data"])
+
+with tab1:  #1.Extract data to MongoDB
     channels=fetch_mongo_channels()
     channel_id=st.text_input("Enter the channel ID here")
     if st.button('Extract data to MongoDB'):
@@ -490,7 +479,8 @@ with tab1:
             st.write('Already exists in MongoDB')
     st.subheader('Channels already loaded in MongoDB')
     st.dataframe(channels,column_config={'0':'Channel Id','1':'Channel Name'})
-with tab2:
+
+with tab2: #2.Export data to MySQLDB
     channels=fetch_mongo_channels()
     option=st.selectbox('Channel info in MongoDB',channels)
     create_db()
@@ -509,14 +499,11 @@ with tab2:
     mysql_ids=[]
     for rows in cursor.fetchall():
         mysql_ids.append(rows[0])
-#    mysql_ids=list(cursor.fetchall())
     if st.button('Export data to MySQL'): 
         if option[0] in mysql_ids:
             st.write(':orange[Already exists in MySQL DB !!!]')
-#            st.write(':orange[Already exists in MySQL DB !!!]',option[0],mysql_ids)
         else:
             st.write(':green[Data migration in progress]')
-#            st.write(':green[Data migration in progress]',option[0],mysql_ids)
 
             create_and_insert_channel_table(option[0])
             create_and_insert_playlist_table(option[0])
@@ -524,7 +511,7 @@ with tab2:
             create_and_insert_comment_table(option[0])
             st.success('Data exported to MySQL')
         
-with tab4:
+with tab3: #3.Query Data
     st.text('Query Data')
     questions=['1. What are the names of all the videos and their corresponding channels?',
                '2. Which channels have the most number of videos, and how many videos do they have?',
