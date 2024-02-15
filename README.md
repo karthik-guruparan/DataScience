@@ -39,9 +39,6 @@ The  Project Objective is to create a Streamlit application that allows users to
 
 ![image](https://github.com/karthik-guruparan/YoutubeDataHarvestor/assets/77478705/bfe139c0-cdbb-4e61-84e1-073fc5f1c257)
 
-
-
-
 ![image](https://github.com/karthik-guruparan/YoutubeDataHarvestor/assets/77478705/174bc33e-b765-47dd-b64d-900d39606e7a)
 
 
