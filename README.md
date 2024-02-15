@@ -34,7 +34,10 @@ The  Project Objective is to create a Streamlit application that allows users to
 
 6. The user needs to repeat previous steps by entering different youtube channel ID so that we have good amount of data to analyse in the final step.
 7. As a final step user can now click on "3.Query Data" and choose any of the query and click on the button. The user gets an output in the tabular format.
-   
+
+![image](https://github.com/karthik-guruparan/YoutubeDataHarvestor/assets/77478705/bfe139c0-cdbb-4e61-84e1-073fc5f1c257)
+
+
 ![image](https://github.com/karthik-guruparan/YoutubeDataHarvestor/assets/77478705/174bc33e-b765-47dd-b64d-900d39606e7a)
 
 
