@@ -13,7 +13,7 @@ def api_param(channel_id):
 
 ## Connect to MongoDB
 def connect_mongo():
-    mongo_connects=MongoClient("mongodb+srv://kars:8OR120O9TR9NKi0R@cluster0.9g02hih.mongodb.net/?retryWrites=true&w=majority")
+    mongo_connects=MongoClient("mongodb+srv://kars:8OR120O9TR9NKi@cluster0.9g02hih.mongodb.net/?retryWrites=true&w=majority")
     db=mongo_connects['youtube']
     collection=db['channels']
     return collection
